@@ -109,8 +109,8 @@ final class PKLookupTask extends Task {
                 boolean found = false;
                 for (int subIDX : segOrder) {
                     IndexState.PKLookupState pkState = pkStates[subIDX];
-          //System.out.println("\nTASK: sub=" + sub);
-          //System.out.println("TEST: lookup " + ids[idx].utf8ToString());
+                    //System.out.println("\nTASK: sub=" + sub);
+                    //System.out.println("TEST: lookup " + ids[idx].utf8ToString());
                     if (pkState.termsEnum.seekExact(id)) {
                         //System.out.println("  found!");
                         pkState.postingsEnum = pkState.termsEnum.postings(pkState.postingsEnum, 0);
